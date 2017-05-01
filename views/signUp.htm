@@ -1,0 +1,71 @@
+﻿<style>.error {
+        border: solid 1px red !important;
+    }
+</style>
+<div class="verticalcenter">
+	
+	<div class="panel panel-primary">
+		<div class="panel-body">
+			<h4 class="text-center" style="margin-bottom: 25px;">Sign Up</h4>
+				<form name="signUpForm" class="form-horizontal" style="margin-bottom: 0px !important;">
+                    <div class="alert alert-danger" data-ng-show="errorIndicator">
+                        {{message}}
+                    </div>
+						<div class="form-group">
+							<div class="col-sm-12">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                                    <input type="email" class="form-control" id="email" placeholder="Email" data-ng-model="user.email" name="email"
+                                           required ng-class="{error : signUpForm.email.$invalid && signUpForm.$submitted }">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-12">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input type="text" class="form-control" id="username" placeholder="Username" data-ng-model="user.name" name="userName"
+                                           required ng-class="{error : signUpForm.userName.$invalid && signUpForm.$submitted }">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-12">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                    <input type="password" class="form-control" id="password" placeholder="Password" data-ng-model="user.password" name="password"
+                                           required ng-class="{error : signUpForm.password.$invalid && signUpForm.$submitted }">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-12">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Repeat password" data-ng-model="user.confirmPassword" name="confirmPassword"
+                                           required ng-class="{error : signUpForm.confirmPassword.$invalid && signUpForm.$submitted }">
+								</div>
+							</div>
+						</div>
+                    <div class="block" style="text-align:center" >
+                        <input type="checkbox" style="margin-right:5px" required name="userAgreement" id="userAgreement"
+                               ng-class="{error : signUpForm.userAgreement.$invalid && signUpForm.$submitted }" checked>
+                        <span>
+                            I accept the <a href="#">User Agreement</a>
+                        </span>
+                    </div>
+						
+					</form>
+					
+		</div>
+		<div class="panel-footer">
+			<div class="pull-left">
+				<a class="btn btn-default" data-ng-click="cancel()">Cancel</a>
+			</div>
+			<div class="pull-right">
+				<a class="btn btn-success" data-ng-click="createAccount()">Sign up</a>
+			</div>
+		</div>
+	</div>
+ </div>
+      
