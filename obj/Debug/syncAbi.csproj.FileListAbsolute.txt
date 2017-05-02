@@ -1,0 +1,6 @@
+D:\angular_applications\syncAbi\syncAbi\bin\syncAbi.dll.config
+D:\angular_applications\syncAbi\syncAbi\bin\syncAbi.dll
+D:\angular_applications\syncAbi\syncAbi\bin\syncAbi.pdb
+D:\angular_applications\syncAbi\syncAbi\obj\Debug\syncAbi.csprojResolveAssemblyReference.cache
+D:\angular_applications\syncAbi\syncAbi\obj\Debug\syncAbi.dll
+D:\angular_applications\syncAbi\syncAbi\obj\Debug\syncAbi.pdb

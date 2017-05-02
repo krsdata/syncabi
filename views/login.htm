@@ -1,0 +1,48 @@
+﻿
+
+<div class="verticalcenter">
+	
+	<div class="panel panel-primary">
+		<div class="panel-body">
+			<h4 class="text-center" style="margin-bottom: 25px;">Log in to get started or <a ui-sref="signup">Sign Up</a></h4>
+				<form name="loginForm" class="form-horizontal" style="margin-bottom: 0px !important;">
+                    <div class="alert alert-danger" data-ng-show="errorIndicator">
+                        {{message}}
+                    </div>
+						<div class="form-group">
+							<div class="col-sm-12">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input type="email" class="form-control" id="email" placeholder="Email" data-ng-model="user.email" name="email"
+                                           required ng-class="{error : loginForm.email.$invalid && loginForm.$submitted }">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-12">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                    <input type="password" class="form-control" id="password" placeholder="Password" name="password"
+                                           data-ng-model="user.password"
+                                           required ng-class="{error : loginForm.password.$invalid && loginForm.$submitted }">   
+                                           
+								</div>
+							</div>
+						</div>
+						<div class="clearfix">
+							<div class="pull-right"><label><input type="checkbox" style="margin-bottom: 20px" checked=""> Remember Me</label></div>
+						</div>
+					</form>
+					
+		</div>
+		<div class="panel-footer">
+			<a href="extras-forgotpassword.htm" class="pull-left btn btn-link" style="padding-left:0">Forgot password?</a>
+			
+			<div class="pull-right">
+				<a data-ng-click="cancel()" class="btn btn-default">Reset</a>
+				<a data-ng-click="login()" class="btn btn-primary">Log In</a>
+			</div>
+		</div>
+	</div>
+ </div>
+      
